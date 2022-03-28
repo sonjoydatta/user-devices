@@ -5,7 +5,7 @@ export const defaultTheme: DefaultTheme = {
 		primary: '#1890ff',
 		success: '#1ad743',
 		danger: '#d87675',
-		dark: '#121f3e',
+		dark: '#263139',
 		text: '#4f4e4e',
 		'gray-100': '#f9f9f9',
 		'gray-200': '#e9ecef',
