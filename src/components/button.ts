@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { ButtonProps } from './@types';
 
 export const Button = styled.button<ButtonProps>`
-	width: ${({ block }) => (block ? '100%' : 'fit-content')};
+	width: auto;
 	height: auto;
 	display: inline-block;
 	text-align: center;
@@ -21,6 +21,13 @@ export const Button = styled.button<ButtonProps>`
 					background-color: transparent;
 					border-color: transparent;
 					text-decoration: underline;
+				`;
+			case 'white':
+				return css`
+					color: ${({ theme }) => theme.colors.dark};
+					background-color: #ffffff;
+					border-color: #ffffff;
+					text-decoration: none;
 				`;
 			default:
 				return css`
@@ -48,7 +55,7 @@ export const Button = styled.button<ButtonProps>`
 				`;
 		}
 	}}
-	border-radius: ${({ rounded }) => (rounded === 'pill' ? '50rem' : '0.5rem')};
+	border-radius: 0.25rem;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 	&:hover,
@@ -58,6 +65,10 @@ export const Button = styled.button<ButtonProps>`
 				case 'link':
 					return css`
 						text-decoration: none;
+					`;
+				case 'white':
+					return css`
+						background-color: rgba(255, 255, 255, 0.85);
 					`;
 				default:
 					return css`
@@ -69,14 +80,6 @@ export const Button = styled.button<ButtonProps>`
 
 	&:disabled {
 		cursor: default;
-		${({ variant = 'primary' }) =>
-			variant === 'primary'
-				? css`
-						background-color: ${({ theme }) => hexToRGB(theme.colors[variant], 0.85)};
-						border-color: ${({ theme }) => hexToRGB(theme.colors[variant], 0.85)};
-				  `
-				: css`
-						opacity: 0.5;
-				  `}
+		opacity: 0.5;
 	}
 `;

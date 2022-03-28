@@ -4,7 +4,7 @@ import { FormElement, UserFormProps, UserFormReturn } from './types';
 
 type Props = Record<string, unknown>;
 
-const useForm = <T extends Props, K extends Props>(
+export const useForm = <T extends Props, K extends Props>(
 	props: UserFormProps<T, K>
 ): UserFormReturn<T, K> => {
 	const { initialValues, initialErrors, validate, onSuccess } = props;
@@ -43,5 +43,3 @@ const useForm = <T extends Props, K extends Props>(
 		handleSubmit,
 	};
 };
-
-export default useForm;

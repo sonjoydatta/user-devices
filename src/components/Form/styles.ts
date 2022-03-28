@@ -36,7 +36,7 @@ export const FormInput = styled.input<FormInputProps>`
 	padding: 0.69rem 1rem;
 	border: 1px solid ${({ theme, variant }) => theme.colors[variant || 'gray-200']};
 	appearance: none;
-	border-radius: 0.5rem;
+	border-radius: 0.25rem;
 	box-shadow: none;
 	transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 

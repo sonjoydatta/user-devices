@@ -1,11 +1,9 @@
 import { ButtonHTMLAttributes } from 'react';
-import { Rounded, Size, Variant } from './variant';
+import { Size, Variant } from './variant';
 
-type ButtonVariant = Variant | 'link' | 'dark';
+type ButtonVariant = Variant | 'dark' | 'white' | 'link';
 
 export type ButtonProps = {
 	size?: Size;
 	variant?: ButtonVariant;
-	rounded?: Rounded;
-	block?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;

@@ -10,6 +10,27 @@ export const Container = styled.div`
 	background-color: #ff7043;
 `;
 
+export const DevicesWrapper = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.title,
+	.subtitle {
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	.title {
+		font-size: 6rem;
+		line-height: 1;
+	}
+`;
+
 export const FooterContainer = styled.div`
 	width: 100%;
 	display: flex;

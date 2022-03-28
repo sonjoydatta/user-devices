@@ -19,3 +19,12 @@ export const formatValidatorKey = (value: string): string => {
 	const val = formatReadable(value);
 	return val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
 };
+
+export const isJSON = (str: string) => {
+	try {
+		JSON.parse(str);
+	} catch (e) {
+		return false;
+	}
+	return true;
+};
