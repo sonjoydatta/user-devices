@@ -1,7 +1,7 @@
 type Listner = (state: string | null) => void;
 
 export class AuthService {
-	protected listners = new Set<Listner>();
+	private listners = new Set<Listner>();
 
 	getToken() {
 		return localStorage.getItem('token');

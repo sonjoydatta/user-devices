@@ -16,7 +16,7 @@ export const isNullProperties = (obj: Record<string, unknown>): boolean => {
 export const formatReadable = (value: string): string => value.replace(/([A-Z])/g, ' $1');
 
 export const formatValidatorKey = (value: string): string => {
-	const val = formatReadable(value);
+	const val = formatReadable(value).trim();
 	return val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
 };
 

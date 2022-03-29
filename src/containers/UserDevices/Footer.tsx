@@ -15,8 +15,8 @@ export const Footer = memo(() => {
 		const payload: IAPI.NotifyParams = {
 			name: 'Sonjoy D.',
 			email: 'sonjoy.dat@gmail.com',
-			repoUrl: 'pppp',
-			message: 'Hello',
+			repoUrl: 'https://github.com/sonjoydatta/user-devices',
+			message: 'Handel with care',
 		};
 
 		try {

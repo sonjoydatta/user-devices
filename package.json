@@ -6,6 +6,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "format": "prettier -c -w src/**/*",
     "format:check": "prettier -c src/**/*",
     "lint": "eslint src/**/*.{ts,tsx}",
@@ -18,6 +20,13 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.161",
+    "@swc/jest": "^0.2.20",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/styled-components": "^5.1.24",
@@ -28,6 +37,8 @@
     "eslint-config-next": "^12.1.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.5.1",
+    "ts-node": "^10.7.0",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",
     "vite-plugin-tsconfig-paths": "^1.0.5"

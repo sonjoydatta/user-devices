@@ -22,6 +22,7 @@ const UserSignIn = () => {
 			}
 
 			authService.setToken(response.data);
+			addToast('Successfully logged in', { appearance: 'success', autoDismiss: true });
 		} catch (error) {
 			if (error instanceof Error) {
 				addToast(error.message, { appearance: 'error', autoDismiss: true });
@@ -47,7 +48,9 @@ const UserSignIn = () => {
 
 				<form onSubmit={handleSubmit}>
 					<Form.Group>
-						<Form.Label srOnly>Email</Form.Label>
+						<Form.Label htmlFor='email' srOnly>
+							Email
+						</Form.Label>
 						<Form.Input
 							type='email'
 							name='email'
@@ -59,7 +62,9 @@ const UserSignIn = () => {
 						{errors.email && <Form.Message variant='danger'>{errors.email}</Form.Message>}
 					</Form.Group>
 					<Form.Group>
-						<Form.Label srOnly>Email</Form.Label>
+						<Form.Label htmlFor='password' srOnly>
+							Password
+						</Form.Label>
 						<Form.Input
 							type='password'
 							name='password'
