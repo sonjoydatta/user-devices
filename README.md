@@ -8,10 +8,6 @@
 4. Styled-components for styling the UI components
 5. Jest for testing the application
 
-## Demo
-
-This application is deployed on Vercel. Please check it out 😄 [here](https://user-devices.vercel.app).
-
 ## Installation
 
 Clone the repository and run the following command:
